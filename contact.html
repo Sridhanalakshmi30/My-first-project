@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Explore India</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Poppins",sans-serif;background:#eef9f8;color:#333;line-height:1.6}
+    header{background:#3aa6a6;color:#fff;padding:15px 0;position:sticky;top:0;z-index:10}
+    header .container{width:90%;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:1.8rem}
+    header h1 span{color:#ffd700}
+    nav ul{list-style:none;display:flex;gap:25px}
+    nav a{text-decoration:none;color:#fff;font-weight:500;transition:.3s}
+    nav a:hover{color:#ffd700}
+    .menu-toggle{display:none;flex-direction:column;cursor:pointer}
+    .menu-toggle span{background:#fff;height:3px;width:25px;margin:4px 0;border-radius:2px}
+    @media(max-width:768px){
+      nav ul{display:none;flex-direction:column;position:absolute;top:60px;right:0;background:#3aa6a6;width:200px;padding:20px;gap:15px}
+      nav ul.active{display:flex}
+      .menu-toggle{display:flex}
+    }
+
+    .contact-section{padding:80px 20px;text-align:center}
+    .contact-section h2{font-size:2rem;color:#3aa6a6;margin-bottom:20px;animation:fadeIn 1s ease}
+    .contact-section p{max-width:700px;margin:auto;color:#444;margin-bottom:40px;animation:fadeIn 1.2s ease}
+    form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);animation:slideUp 1.3s ease}
+    form input,form textarea{width:100%;padding:12px 15px;margin-bottom:15px;border:1px solid #ccc;border-radius:8px;font-family:"Poppins",sans-serif;font-size:1rem;transition:.3s}
+    form input:focus,form textarea:focus{border-color:#3aa6a6;outline:none;box-shadow:0 0 5px rgba(58,166,166,.5)}
+    button{background:#3aa6a6;color:#fff;border:none;padding:12px 25px;border-radius:8px;cursor:pointer;font-weight:600;font-size:1rem;transition:.3s}
+    button:hover{background:#2e8b8b}
+    .info{margin-top:50px}
+    .info p{margin-bottom:10px;font-size:1rem}
+    .info a{text-decoration:none;color:#3aa6a6;font-weight:500}
+    footer{background:#3aa6a6;color:#fff;text-align:center;padding:20px 0;font-size:.9rem;margin-top:60px}
+
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Explore<span>India</span></h1>
+      <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Whether you have a question about tours, pricing, or custom trips — our team is ready to assist.</p>
+    <form action="#" method="post">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="info">
+      <p>📍 CIT Nagar, Chennai, India</p>
+      <p>📞 +91 63835 58402</p>
+      <p>📧 <a href="mailto:info@exploreindia.com">info@exploreindia.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Explore India. Designed with peace & purpose 🌿</p>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('menu-toggle');
+    const navLinks=document.getElementById('nav-links');
+    toggle.addEventListener('click',()=>{navLinks.classList.toggle('active')});
+  </script>
+</body>
+</html>

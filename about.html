@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Explore India</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Poppins",sans-serif;background:#eef9f8;color:#333;line-height:1.6}
+    header{background:#3aa6a6;color:#fff;padding:15px 0;position:sticky;top:0;z-index:10}
+    header .container{width:90%;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:1.8rem}
+    header h1 span{color:#ffd700}
+    nav ul{list-style:none;display:flex;gap:25px}
+    nav a{text-decoration:none;color:#fff;font-weight:500;transition:.3s}
+    nav a:hover{color:#ffd700}
+    .menu-toggle{display:none;flex-direction:column;cursor:pointer}
+    .menu-toggle span{background:#fff;height:3px;width:25px;margin:4px 0;border-radius:2px}
+    @media(max-width:768px){
+      nav ul{display:none;flex-direction:column;position:absolute;top:60px;right:0;background:#3aa6a6;width:200px;padding:20px;gap:15px}
+      nav ul.active{display:flex}
+      .menu-toggle{display:flex}
+    }
+
+    .about-section{padding:80px 20px;text-align:center;animation:fadeIn 1.2s ease}
+    .about-section h2{font-size:2rem;color:#3aa6a6;margin-bottom:20px}
+    .about-section p{max-width:750px;margin:auto;color:#444;margin-bottom:40px;line-height:1.8}
+    .team{display:flex;justify-content:center;flex-wrap:wrap;gap:25px;margin-top:40px}
+    .member{background:#fff;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);padding:20px;width:280px;animation:slideUp 1s ease}
+    .member img{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:15px}
+    .member h3{color:#3aa6a6;margin-bottom:5px}
+    .member p{font-size:.95rem;color:#555}
+    footer{background:#3aa6a6;color:#fff;text-align:center;padding:20px 0;font-size:.9rem;margin-top:60px}
+
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Explore<span>India</span></h1>
+      <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="about-section">
+    <h2>About Explore India</h2>
+    <p>
+      At <strong>Explore India</strong>, we believe travel is more than just sightseeing — it's about connecting
+      with culture, discovering inner peace, and creating memories that last a lifetime.
+      Since our founding, we’ve helped travelers explore India’s rich landscapes, from the serene
+      backwaters of Kerala to the majestic forts of Rajasthan, with comfort, care, and sustainability in mind.
+    </p>
+
+    <div class="team">
+      <div class="member">
+        <img src="images/photo1.jpg" alt="Team Member 1">
+        <h3>R. Janani</h3>
+        <p>Founder & Travel Curator</p>
+      </div>
+      <div class="member">
+        <img src="images/photo2.jpg" alt="Team Member 2">
+        <h3>Arjun Mehta</h3>
+        <p>Operations Manager</p>
+      </div>
+      <div class="member">
+        <img src="images/photo3.jpg" alt="Team Member 3">
+        <h3>Priya Singh</h3>
+        <p>Customer Experience Lead</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Explore India. Crafted with care and culture 🌿</p>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('menu-toggle');
+    const navLinks=document.getElementById('nav-links');
+    toggle.addEventListener('click',()=>{navLinks.classList.toggle('active')});
+  </script>
+</body>
+</html>

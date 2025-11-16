@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Packages | Explore India</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Nunito',sans-serif;color:#2c3e50;background:#f8fbfb}
+    header{background:#3aa6a6;color:#fff;padding:18px 0;position:sticky;top:0;z-index:10;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+    header .container{width:90%;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:1.9rem;font-weight:700;letter-spacing:1px}
+    header h1 span{color:#e0f7f7}
+    nav ul{list-style:none;display:flex;gap:25px}
+    nav a{text-decoration:none;color:#fff;font-weight:500;transition:.3s}
+    nav a:hover{color:#cceeee}
+    .menu-toggle{display:none;flex-direction:column;cursor:pointer}
+    .menu-toggle span{background:#fff;height:3px;width:25px;margin:4px 0;border-radius:2px}
+    @media(max-width:768px){
+      nav ul{display:none;flex-direction:column;position:absolute;top:65px;right:0;background:#3aa6a6;width:200px;padding:20px;gap:15px;border-radius:0 0 10px 10px}
+      nav ul.active{display:flex}
+      .menu-toggle{display:flex}
+    }
+
+    .hero{
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative
+    }
+    .hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.35)}
+    .hero-text{position:relative;z-index:1;padding:0 20px}
+    .hero-text h2{font-size:2.8rem;font-weight:700;margin-bottom:10px}
+    .hero-text p{font-size:1.1rem}
+
+    .section{padding:80px 20px;text-align:center}
+    .section h2{font-size:2.2rem;margin-bottom:40px;color:#3aa6a6}
+    .packages-grid{display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+    .package{background:#fff;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.08);width:320px;overflow:hidden;transition:.4s ease;text-align:left}
+    .package:hover{transform:translateY(-8px)}
+    .package img{width:100%;height:220px;object-fit:cover}
+    .package-content{padding:20px}
+    .package h3{color:#3aa6a6;margin-bottom:10px}
+    .package p{font-size:.95rem;color:#555;margin-bottom:15px}
+    .price{font-weight:700;color:#0e3d3d;margin-bottom:10px}
+    .btn{display:inline-block;background:#3aa6a6;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;font-weight:600;transition:.3s}
+    .btn:hover{background:#2d7c7c}
+    .back-link{text-align:center;margin-top:50px}
+    .back-link a{color:#3aa6a6;font-weight:600;text-decoration:none}
+    .back-link a:hover{text-decoration:underline}
+
+    footer{background:#0e3d3d;color:#cceeee;text-align:center;padding:20px 0;font-size:.9rem;margin-top:80px}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Explore<span>India</span></h1>
+      <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Home.html">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Peaceful Travel Packages</h2>
+      <p>Find balance, joy, and rejuvenation with our handpicked tours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Featured Packages</h2>
+    <div class="packages-grid">
+      <div class="package">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Himalayan Retreat">
+        <div class="package-content">
+          <h3>Himalayan Retreat</h3>
+          <p>Experience peace among snow-capped peaks with yoga, meditation, and nature walks.</p>
+          <p class="price">₹35,000 / 5 Days</p>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="package">
+        <img src="images/blackwater.jpg" alt="Kerala Backwaters">
+        <div class="package-content">
+          <h3>Kerala Backwaters</h3>
+          <p>Glide through tranquil waters, savor local cuisine, and unwind amidst lush greenery.</p>
+          <p class="price">₹28,000 / 4 Days</p>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="package">
+        <img src="images/rajasthan.jpg" alt="Rajasthan Heritage Tour">
+        <div class="package-content">
+          <h3>Rajasthan Heritage Tour</h3>
+          <p>Discover the calm of desert dunes, royal palaces, and slow-paced village life.</p>
+          <p class="price">₹40,000 / 6 Days</p>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="package">
+        <img src="images/goa beach.webp" alt="Goa Serenity Escape">
+        <div class="package-content">
+          <h3>Goa Serenity Escape</h3>
+          <p>Relax by peaceful beaches, enjoy spa treatments, and soak in coastal charm.</p>
+          <p class="price">₹25,000 / 3 Days</p>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="back-link">
+      <p><a href="Home.html">← Back to Home</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Explore India. Calm journeys, lasting memories.</p>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('menu-toggle');
+    const navLinks=document.getElementById('nav-links');
+    toggle.addEventListener('click',()=>{navLinks.classList.toggle('active')});
+  </script>
+</body>
+</html>

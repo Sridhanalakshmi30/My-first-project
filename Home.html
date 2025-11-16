@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore India - Peaceful Journeys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',sans-serif;color:#2c3e50;background:#f8fbfb}
+    header{background:#3aa6a6;color:#fff;padding:18px 0;position:sticky;top:0;z-index:10;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+    header .container{width:90%;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:1.9rem;font-weight:700;letter-spacing:1px}
+    header h1 span{color:#e0f7f7}
+    nav ul{list-style:none;display:flex;gap:25px}
+    nav a{text-decoration:none;color:#fff;font-weight:500;transition:.3s}
+    nav a:hover{color:#cceeee}
+    .menu-toggle{display:none;flex-direction:column;cursor:pointer}
+    .menu-toggle span{background:#fff;height:3px;width:25px;margin:4px 0;border-radius:2px}
+    @media(max-width:768px){
+      nav ul{display:none;flex-direction:column;position:absolute;top:65px;right:0;background:#3aa6a6;width:200px;padding:20px;gap:15px;border-radius:0 0 10px 10px}
+      nav ul.active{display:flex}
+      .menu-toggle{display:flex}
+    }
+
+    .hero{
+      background:url("images/backgroung3.jpg") no-repeat center/cover;
+      height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative
+    }
+    .hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.35)}
+    .hero-text{position:relative;z-index:1;max-width:650px;padding:0 20px}
+    .hero h2{font-size:3rem;font-weight:700;margin-bottom:15px;text-shadow:2px 2px 6px rgba(0,0,0,0.3)}
+    .hero p{font-size:1.1rem;margin-bottom:25px;line-height:1.6}
+    .btn{display:inline-block;background:#e0f7f7;color:#0e3d3d;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
+    .btn:hover{background:#fff;color:#3aa6a6;box-shadow:0 4px 10px rgba(0,0,0,0.2)}
+
+    .section{padding:80px 20px;text-align:center}
+    .section h2{font-size:2.2rem;margin-bottom:30px;color:#3aa6a6}
+    .cards{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}
+    .card{background:#fff;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,0.08);width:320px;overflow:hidden;transition:.4s ease}
+    .card:hover{transform:translateY(-8px)}
+    .card img{width:100%;height:220px;object-fit:cover}
+    .card h3{margin:18px 0 8px;color:#3aa6a6;font-weight:600}
+    .card p{padding:0 20px 25px;font-size:.95rem;color:#555}
+
+    .about{background:#eef9f8}
+    .about p{max-width:700px;margin:auto;font-size:1rem;color:#444;line-height:1.8;margin-bottom:25px}
+
+    .contact{background:linear-gradient(135deg,#a4e0dd,#3aa6a6);color:#fff}
+    .contact p{font-size:1.05rem;margin-bottom:25px}
+    .contact .btn{background:#fff;color:#3aa6a6}
+    .contact .btn:hover{background:#e0f7f7;color:#0e3d3d}
+
+    footer{background:#0e3d3d;color:#cceeee;text-align:center;padding:20px 0;font-size:.9rem}
+    .fade-in,.fade-in-up,.slide-up{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+    .fade-in.visible,.fade-in-up.visible,.slide-up.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <header>
+    
+    <div class="container">
+      <h1>Explore<span>India</span></h1>
+      <div class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text fade-in">
+      <h2>Discover Peaceful India</h2>
+      <p>Find harmony in the Himalayas, serenity by the beaches, and calm in ancient temples.</p>
+      <a href="packages.html" class="btn">View Packages</a>
+    </div>
+  </section>
+
+  <section id="destinations" class="section">
+    <h2 class="slide-up">Top Destinations</h2>
+    <div class="cards">
+      <div class="card fade-in-up">
+        <img src="images/taj mahal.jpg" alt="Taj Mahal" />
+        <h3>Agra</h3>
+        <p>Marvel at the tranquil beauty of the Taj Mahal, a monument of love and balance.</p>
+      </div>
+      <div class="card fade-in-up">
+        <img src="images/kerala.jpg" alt="Kerala" />
+        <h3>Kerala</h3>
+        <p>Float through the peaceful backwaters surrounded by lush greenery and calm skies.</p>
+      </div>
+      <div class="card fade-in-up">
+        <img src="images/jaipur.webp" alt="Jaipur" />
+        <h3>Jaipur</h3>
+        <p>Find serenity among royal palaces and timeless architecture of the Pink City.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about fade-in">
+    <h2>Our Philosophy</h2>
+    <p>We believe travel should heal the mind and soothe the soul. Every journey we create is designed to help you reconnect with nature, culture, and yourself. Let’s explore India with peace, purpose, and heart.</p>
+    <a href="about.html" class="btn">Explore More</a>
+  </section>
+
+  <section id="booking" class="section" style="background:#eef9f8;">
+    <h2 style="color:#3aa6a6;">Book Your Peaceful Journey</h2>
+    <p style="max-width:700px;margin:auto;color:#444;line-height:1.8;margin-bottom:30px;">
+      Ready to embark on your next peaceful adventure? Choose from our curated packages and book easily online.
+      Our team will take care of everything — from travel to stay — so you can relax and enjoy your journey.
+    </p>
+    <a href="booking.html" class="btn">Go to Booking Page</a>
+  </section>
+
+
+  <section id="contact" class="section contact slide-up">
+    <h2>Get in Touch</h2>
+    <p>Ready to plan your peaceful escape? Connect with our travel experts today.</p>
+    <a href="mailto:info@exploreindia.com" class="btn">Contact Us</a>
+  </section>
+
+
+  <footer>
+    <p>© 2025 Explore India. Crafted with calm & care.</p>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('menu-toggle');
+    const navLinks=document.getElementById('nav-links');
+    toggle.addEventListener('click',()=>{navLinks.classList.toggle('active')});
+    const elements=document.querySelectorAll('.fade-in,.fade-in-up,.slide-up');
+    const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})});
+    elements.forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
